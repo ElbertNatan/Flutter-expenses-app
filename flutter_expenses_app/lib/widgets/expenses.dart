@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:futter_expenses_app/models/Expense.dart';
 import 'package:futter_expenses_app/widgets/expenses_list/expenses_list.dart';
 import 'package:futter_expenses_app/widgets/new_expense.dart';
+import 'package:futter_expenses_app/widgets/chart/chart.dart';
 
 class Expenses extends StatefulWidget {
   const Expenses({super.key});
@@ -88,7 +89,9 @@ class _ExpensesState extends State<Expenses> {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const Text("Chart"),
+          Chart(
+            expenses: _registereExpenses,
+          ),
           Expanded(
             child: mainContent,
           )
